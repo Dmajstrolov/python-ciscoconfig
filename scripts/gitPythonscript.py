@@ -3,7 +3,7 @@ import time
 
 def gitPush(t):
 
-	exec(open('autopush.py').read()),t
+	exec(open('pythonGitPush.py').read()),t
 
 	return
 
