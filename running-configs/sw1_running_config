@@ -1,0 +1,98 @@
+
+!
+version 12.1
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+!
+hostname Sw1_Elias
+!
+enable secret 5 $1$zQLt$br/61CynQr2rrH39NuF3z.
+!
+username Elias password 7 094F471A1A0A
+ip subnet-zero
+!
+no ip domain-lookup
+ip ssh time-out 120
+ip ssh authentication-retries 3
+!
+spanning-tree mode pvst
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface Vlan1
+ ip address 192.168.1.25 255.255.255.0
+ no ip route-cache
+!
+ip default-gateway 192.168.1.1
+ip http server
+banner motd Hello world
+!
+line con 0
+line vty 0
+ exec-timeout 15 0
+ password 7 14141B180F0B
+ login local
+line vty 1 4
+ exec-timeout 15 0
+ password 7 14141B180F0B
+ login
+line vty 5 15
+ login
+!
+!
+end
