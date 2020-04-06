@@ -6,7 +6,7 @@ service timestamps debug uptime
 service timestamps log uptime
 service password-encryption
 !
-hostname Sw1_Elias
+hostname switchen_Elias
 !
 enable secret 5 $1$zQLt$br/61CynQr2rrH39NuF3z.
 !
