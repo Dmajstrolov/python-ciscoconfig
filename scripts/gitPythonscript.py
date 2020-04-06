@@ -4,7 +4,7 @@ import time
 def gitPush(t):
 
 	exec(open('AutoGetConfig.py').read()),t
-	exec(open('pythonGitPush.py').read()),t
+	exec(open('pushtoGit.py').read()),t
 
 	return
 
